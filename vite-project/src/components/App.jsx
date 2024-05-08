@@ -2,8 +2,15 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css';
+import BookList from './Booklist';
 import { Product} from './Products';
 
+
+const favoriteBooks = [
+  { id: "id-1", name: "JS for beginners" },
+  { id: "id-2", name: "React basics" },
+  { id: "id-3", name: "React Router overview" }
+];
 
 
 export default function Apps() {
@@ -21,10 +28,10 @@ export default function Apps() {
         imgUrl="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?dpr=2&h=480&w=640"
         price={14.29}
       />
-      <Product
-        name="Shaurma"
-        price={14.88}
-      />
+       <>
+      <h1>Books of the week</h1>
+      <BookList books={favoriteBooks} />
+    </>
     </div>
   );
 }
